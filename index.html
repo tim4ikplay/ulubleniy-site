@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Магазин</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <script>
+        const texts = [
+            "Найприкольніший магазин",
+            "Найкайфовіший магазин",
+            "Найгарніший магазин",
+            "Найчесніший магазин",
+            "Найщасливіший магазин"
+        ];
+
+        let index = 0;
+
+        function changeText() {
+            const button = document.getElementById("shopButton");
+            button.textContent = texts[index];
+            index = (index + 1) % texts.length;
+        }
+    </script>
+    <button onclick="changeText()" id="shopButton">Найкращий магазин</button>
+
+    <h2>Навігація</h2>
+    <ul>
+        <li>Головна сторінка</li>
+        <li>Категорії товарів</li>
+        <li>Про проект</li>
+        <li>Контакти</li>
+    </ul>
+
+    <h2>Список категорій</h2>
+    <ul>
+
+    <script>
+        var photosCount = 3;
+        var currentPhotoIndex = 1;
+
+        function showNextPhoto() {
+            currentPhotoIndex++;
+
+            if (currentPhotoIndex > photosCount) {
+                currentPhotoIndex = 1;
+            }
+
+            var elem = document.getElementById("currentPhoto");
+            elem.src = "img/photo" + currentPhotoIndex + ".jpg";
+        }
+    </script>
+
+        <h2>Галерея</h2>
+        <img id="currentPhoto" src="img/photo1.jpg" width="300">
+        <br>
+        <button onclick="showNextPhoto()">Наступне</button>
+        <li>Все для подорожей</li>
+        <li>Велосипеди та аксесуари</li>
+        <li>Гірськолижний спорт</li>
+        <li>Футбол та хокей</li>
+    </ul>
+
+
+</body>
+</html>
